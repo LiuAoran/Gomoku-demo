@@ -1,0 +1,3 @@
+QWidget#chessBoard {
+    background-color: #E6D2A5;
+}

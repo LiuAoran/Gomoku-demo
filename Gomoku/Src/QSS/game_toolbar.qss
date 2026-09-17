@@ -1,0 +1,26 @@
+QWidget#gameToolbar {
+    background-color: #65452F;
+}
+
+QPushButton {
+    background-color: #F1DFC0;
+    color: #4A3424;
+
+    border: 1px solid #8F6847;
+    border-radius: 6px;
+
+    padding: 6px 14px;
+}
+
+QPushButton:hover {
+    background-color: #F7E8CF;
+}
+
+QPushButton:pressed {
+    background-color: #DCC09A;
+}
+
+QLabel {
+    color: #FFF8EC;
+    font-weight: bold;
+}

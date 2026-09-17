@@ -1,0 +1,97 @@
+/* =========================
+   标题
+   ========================= */
+
+QLabel#title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #EFEFEF;
+}
+
+QLabel#subtitle {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+
+/* =========================
+   按钮基础样式
+   ========================= */
+
+QPushButton {
+    min-width: 240px;
+    min-height: 50px;
+
+    border-radius: 10px;
+    border: 1px solid #CFC5B5;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    background-color: #EDE7DC;
+    color: #3B3732;
+}
+
+
+/* =========================
+   AI 对弈
+   ========================= */
+
+QPushButton#startBtn {
+    background-color: #3B3732;
+    color: #FFFFFF;
+    border: 1px solid #3B3732;
+}
+
+QPushButton#startBtn:hover {
+    background-color: #514B44;
+    border-color: #514B44;
+}
+
+QPushButton#startBtn:pressed {
+    background-color: #292622;
+    border-color: #292622;
+}
+
+
+/* =========================
+   双人对弈
+   ========================= */
+
+QPushButton#settingsBtn {
+    background-color: #EDE7DC;
+    color: #3B3732;
+    border: 1px solid #CFC5B5;
+}
+
+QPushButton#settingsBtn:hover {
+    background-color: #E3DACB;
+    border-color: #BEB2A1;
+}
+
+QPushButton#settingsBtn:pressed {
+    background-color: #D8CDBB;
+}
+
+
+/* =========================
+   退出
+   ========================= */
+
+QPushButton#exitBtn {
+    background-color: #F7F3EA;
+    color: #6F675D;
+    border: 1px solid #CFC5B5;
+}
+
+QPushButton#exitBtn:hover {
+    background-color: #FDECEC;
+    color: #C62828;
+    border-color: #E57373;
+}
+
+QPushButton#exitBtn:pressed {
+    background-color: #C62828;
+    color: #FFFFFF;
+    border-color: #C62828;
+}
