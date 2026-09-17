@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow, QWidget
 
-from Tools.Macro import GameMode
-from Tools.Helper import Helper
+from Tools.macro import GameMode
+from Tools.helper import Helper
 from UI import start_widget, game_widget
 
 

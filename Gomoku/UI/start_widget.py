@@ -6,8 +6,8 @@ from PySide6.QtWidgets import (
     QPushButton,
 )
 
-from Tools.Macro import GameMode
-from Tools.Helper import Helper
+from Tools.macro import GameMode
+from Tools.helper import Helper
 
 class StartWidget(QWidget):
     start_game = Signal(GameMode)

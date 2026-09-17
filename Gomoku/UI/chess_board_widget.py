@@ -6,7 +6,8 @@ from PySide6.QtWidgets import (
     QLabel,
 )
 
-from Tools.Helper import Helper
+from Tools.helper import Helper
+from Tools.macro import Const
 from UI.chess_board_canvas import ChessBoardCanvas
 
 class ChessBoardWidget(QWidget):
@@ -21,7 +22,7 @@ class ChessBoardWidget(QWidget):
         main_layout = QVBoxLayout(self)
         main_layout.setContentsMargins(20, 20, 20, 20)
         main_layout.setSpacing(0)
-        cell_size = 36
+
         # =========================
         # 上方数字
         # =========================
@@ -32,7 +33,7 @@ class ChessBoardWidget(QWidget):
 
         for number in range(1, 16):
             label = QLabel(str(number))
-            label.setFixedWidth(cell_size)
+            label.setFixedWidth(Const.CELL_SIZE)
             label.setAlignment(
                 Qt.AlignmentFlag.AlignTop |
                 Qt.AlignmentFlag.AlignHCenter
@@ -59,7 +60,7 @@ class ChessBoardWidget(QWidget):
 
         for letter in reversed("ABCDEFGHIJKLMNO"):
             label = QLabel(letter)
-            label.setFixedHeight(cell_size)
+            label.setFixedHeight(Const.CELL_SIZE)
             label.setAlignment(
                 Qt.AlignmentFlag.AlignVCenter |
                 Qt.AlignmentFlag.AlignLeft
@@ -73,8 +74,8 @@ class ChessBoardWidget(QWidget):
         # =========================
         self.board_area = ChessBoardCanvas()
         self.board_area.setFixedSize(
-            cell_size * 15,
-            cell_size * 15
+            Const.CELL_SIZE * 15,
+            Const.CELL_SIZE * 15
         )
 
         board_layout.addWidget(self.board_area, alignment=Qt.AlignmentFlag.AlignTop|Qt.AlignmentFlag.AlignLeft)
