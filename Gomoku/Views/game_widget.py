@@ -5,8 +5,8 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
 )
 
-from UI.chess_board_widget import ChessBoardWidget
-from UI.game_toolbar import GameToolbar
+from Views.chess_board_widget import ChessBoardWidget
+from Views.game_toolbar import GameToolbar
 
 
 class GameWidget(QWidget):

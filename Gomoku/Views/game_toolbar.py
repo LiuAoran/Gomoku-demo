@@ -8,7 +8,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt
 
 
-from Tools.helper import Helper
+from Tools.helpers import Helper
 from PySide6.QtGui import QPalette
 
 class GameToolbar(QWidget):

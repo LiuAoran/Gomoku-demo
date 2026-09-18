@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed7f74d4-fc35-45ab-8dea-96139b9b6db9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Tools/converter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/play_game_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/data_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/Helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/Macro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/macro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/chess_board_canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/chess_board_canvas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/chess_board_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/chess_board_widget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/game_toolbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/game_toolbar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/start_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/start_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/converters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/macro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/macros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/chess_board_canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/chess_board_canvas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/chess_board_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/chess_board_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/game_toolbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/game_toolbar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/game_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/game_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/start_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/start_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +72,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/UI" />
+      <recent name="$PROJECT_DIR$/Controllers" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/UI" />
     </key>
   </component>
   <component name="RunManager">
@@ -118,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1789636883986</updated>
       <workItem from="1789636885148" duration="960000" />
-      <workItem from="1789637854312" duration="18432000" />
+      <workItem from="1789637854312" duration="25271000" />
     </task>
     <servers />
   </component>
@@ -139,6 +145,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Gomoku$start_widget.coverage" NAME="start_widget 覆盖结果" MODIFIED="1789637744411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
     <SUITE FILE_PATH="coverage/Gomoku$main_window.coverage" NAME="main_window 覆盖结果" MODIFIED="1789637902950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
-    <SUITE FILE_PATH="coverage/Gomoku$main.coverage" NAME="main 覆盖结果" MODIFIED="1789662288428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Gomoku$main.coverage" NAME="main 覆盖结果" MODIFIED="1789694357119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

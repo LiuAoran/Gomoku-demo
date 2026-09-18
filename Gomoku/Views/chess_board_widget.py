@@ -6,9 +6,9 @@ from PySide6.QtWidgets import (
     QLabel,
 )
 
-from Tools.helper import Helper
-from Tools.macro import Const
-from UI.chess_board_canvas import ChessBoardCanvas
+from Tools.helpers import Helper
+from Tools.macros import Const
+from Views.chess_board_canvas import ChessBoardCanvas
 
 class ChessBoardWidget(QWidget):
     def __init__(self):
