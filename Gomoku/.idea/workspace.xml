@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed7f74d4-fc35-45ab-8dea-96139b9b6db9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/play_game_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/data_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/chess_piece_canvas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PySide Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PySide Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/converters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/macro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/macros.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/chess_board_canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/chess_board_canvas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/chess_board_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/chess_board_widget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/game_toolbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/game_toolbar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/game_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/game_widget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/start_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/start_widget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/play_game_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/play_game_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/data_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/data_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/QSS/start_widget.qss" beforeDir="false" afterPath="$PROJECT_DIR$/Src/QSS/start_widget.qss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/macros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/chess_board_canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/chess_board_canvas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/chess_board_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/chess_board_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/start_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/start_widget.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,65 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.venv/lib/python3.13/site-packages/PySide6/QtCore.pyi" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="0.0022126638384683556" />
+      <entry key="MS500" value="0.29443069763945284" />
+      <entry key="S2" value="0.7405627196851721" />
+      <entry key="S5" value="0.9940898570379422" />
+      <entry key="S10" value="1.2711218926726835" />
+      <entry key="S30" value="1.6712591702302122" />
+      <entry key="S60" value="1.8518897860926689" />
+      <entry key="M2" value="2.559347385335449" />
+      <entry key="M5" value="8.717655806227961" />
+      <entry key="M10" value="24.35437915408307" />
+      <entry key="M15" value="39.00104706178393" />
+      <entry key="M30" value="67.74121446038752" />
+      <entry key="H1" value="92.35291709099472" />
+      <entry key="H2" value="108.81068143338437" />
+      <entry key="H4" value="118.38315837944079" />
+      <entry key="D1" value="127.15266814608229" />
+      <entry key="W1" value="128.7341146743391" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0000000003159057" />
+      <entry key="S30" value="1.0011742149900715" />
+      <entry key="S60" value="1.067574833598023" />
+      <entry key="M2" value="1.6499973739035794" />
+      <entry key="M5" value="4.538363012456589" />
+      <entry key="M10" value="9.67391850921077" />
+      <entry key="M15" value="14.225229544892532" />
+      <entry key="M30" value="23.36794715654371" />
+      <entry key="H1" value="31.489707392283385" />
+      <entry key="H2" value="37.052678216043375" />
+      <entry key="H4" value="40.33089109866103" />
+      <entry key="D1" value="43.35917975582371" />
+      <entry key="W1" value="43.90770661701045" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.010580041042394078" />
+      <entry key="MS500" value="0.583089276802953" />
+      <entry key="S2" value="1.4501306048206373" />
+      <entry key="S5" value="1.8230444371606016" />
+      <entry key="S10" value="2.132541081692507" />
+      <entry key="S30" value="2.595436510868669" />
+      <entry key="S60" value="2.873506328999584" />
+      <entry key="M2" value="4.176318722309737" />
+      <entry key="M5" value="13.213184212716017" />
+      <entry key="M10" value="33.96680010856623" />
+      <entry key="M15" value="53.15927680151756" />
+      <entry key="M30" value="91.04992311370826" />
+      <entry key="H1" value="123.80202430361363" />
+      <entry key="H2" value="145.83940984505583" />
+      <entry key="H4" value="158.70101755097974" />
+      <entry key="D1" value="170.50951499718207" />
+      <entry key="W1" value="172.64148388059112" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -59,7 +116,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,7 +126,9 @@
     "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -124,7 +185,10 @@
       <option name="presentableId" value="Default" />
       <updated>1789636883986</updated>
       <workItem from="1789636885148" duration="960000" />
-      <workItem from="1789637854312" duration="25271000" />
+      <workItem from="1789637854312" duration="30238000" />
+      <workItem from="1789709867597" duration="492000" />
+      <workItem from="1789710369117" duration="1000" />
+      <workItem from="1789732569394" duration="3961000" />
     </task>
     <servers />
   </component>
@@ -145,6 +209,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Gomoku$start_widget.coverage" NAME="start_widget 覆盖结果" MODIFIED="1789637744411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
     <SUITE FILE_PATH="coverage/Gomoku$main_window.coverage" NAME="main_window 覆盖结果" MODIFIED="1789637902950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
-    <SUITE FILE_PATH="coverage/Gomoku$main.coverage" NAME="main 覆盖结果" MODIFIED="1789694357119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Gomoku$main.coverage" NAME="main 覆盖结果" MODIFIED="1789736455880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

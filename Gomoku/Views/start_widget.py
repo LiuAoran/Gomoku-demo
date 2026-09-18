@@ -10,7 +10,7 @@ from Tools.macros import GameMode
 from Tools.helpers import Helper
 
 class StartWidget(QWidget):
-    start_game = Signal(GameMode)
+    start_game_signal = Signal(GameMode)
 
     def __init__(self):
         super().__init__()
@@ -85,11 +85,11 @@ class StartWidget(QWidget):
         # 信号
         # =========================
         ai_player_button.clicked.connect(
-            lambda: self.start_game.emit(GameMode.AI)
+            lambda: self.start_game_signal.emit(GameMode.AI)
         )
 
         two_player_button.clicked.connect(
-            lambda: self.start_game.emit(GameMode.TWO_PLAYERS)
+            lambda: self.start_game_signal.emit(GameMode.TWO_PLAYERS)
         )
 
         exit_button.clicked.connect(self.close)

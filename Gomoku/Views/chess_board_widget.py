@@ -9,6 +9,7 @@ from PySide6.QtWidgets import (
 from Tools.helpers import Helper
 from Tools.macros import Const
 from Views.chess_board_canvas import ChessBoardCanvas
+from Views.chess_piece_canvas import ChessPieceCanvas
 
 class ChessBoardWidget(QWidget):
     def __init__(self):
@@ -72,13 +73,32 @@ class ChessBoardWidget(QWidget):
         # =========================
         # 棋盘
         # =========================
-        self.board_area = ChessBoardCanvas()
-        self.board_area.setFixedSize(
-            Const.CELL_SIZE * 15,
-            Const.CELL_SIZE * 15
+
+        self.board_container = QWidget()
+        self.board_container.setFixedSize(
+            Const.BOARD_SIZE * Const.CELL_SIZE,
+            Const.BOARD_SIZE * Const.CELL_SIZE
         )
 
-        board_layout.addWidget(self.board_area, alignment=Qt.AlignmentFlag.AlignTop|Qt.AlignmentFlag.AlignLeft)
-        self.setLayout(board_layout)
+        # 棋盘层
+        self.board_area = ChessBoardCanvas()
+        self.board_area.setParent(self.board_container)
+        self.board_area.move(0, 0)
 
+        # 棋子层
+        self.piece_area = ChessPieceCanvas()
+        self.piece_area.setParent(self.board_container)
+        self.piece_area.move(0, 0)
+
+        # 棋子层覆盖在棋盘层上
+        self.piece_area.raise_()
+
+        # 加入布局
+        board_layout.addWidget(
+            self.board_container,
+            alignment=Qt.AlignmentFlag.AlignTop
+                      | Qt.AlignmentFlag.AlignLeft
+        )
+
+        self.setLayout(board_layout)
         main_layout.addLayout(board_layout)

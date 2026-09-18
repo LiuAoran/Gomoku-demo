@@ -34,7 +34,7 @@ QPushButton {
 
 
 /* =========================
-   AI 对弈
+   对弈
    ========================= */
 
 QPushButton#startBtn {
@@ -53,9 +53,8 @@ QPushButton#startBtn:pressed {
     border-color: #292622;
 }
 
-
 /* =========================
-   双人对弈
+   设置
    ========================= */
 
 QPushButton#settingsBtn {

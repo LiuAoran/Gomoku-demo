@@ -20,6 +20,7 @@ class Move:
 @dataclass
 class GameModel:
     game_id: str = ""
+    current_player: Player = Player.BLACK
     moves: list[Move] = field(default_factory=list)
     board:  list[list[Player | None]] = field(
             default_factory=lambda: [
