@@ -1,7 +1,7 @@
-from ast import List
+from uuid import uuid4
 from dataclasses import dataclass, field
 
-from Tools.macros import Player, GameMode
+from tools.macros import Player, GameMode
 
 @dataclass
 class Point:
@@ -29,12 +29,16 @@ class GameModel:
         )
     game_mode: GameMode | None =field(default=None)
     winner: Player | None = None
+    revision: int = 0
+    evaluations: list[float] = field(default_factory=lambda: [0.0])
 
     def init_new_game(self, game_mode: GameMode):
         self.game_mode = game_mode
         self.winner = None
-        self.game_id = ""
+        self.current_player = Player.BLACK
+        self.game_id = uuid4().hex
+        self.revision += 1
+        self.evaluations = [0.0]
         self.moves = []
         self.board = [[None] * 15 for _ in range(15)]
-
 

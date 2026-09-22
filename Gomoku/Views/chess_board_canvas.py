@@ -2,7 +2,7 @@ from PySide6.QtGui import QPainter, QPen
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget
 
-from Tools.macros import Const
+from tools.macros import Const
 
 
 class ChessBoardCanvas(QWidget):

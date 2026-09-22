@@ -1,0 +1,106 @@
+QDialog#settingsDialog {
+    background-color: #F1DFC0;
+    color: #4A3424;
+}
+QLabel, QCheckBox {
+    color: #4A3424;
+    background: transparent;
+}
+QTabWidget, QTabWidget::pane, QTabWidget QStackedWidget {
+    background: transparent;
+    border: none;
+}
+QTabWidget::pane {
+    top: 8px;
+}
+QWidget#settingsPage {
+    background-color: #FBF4E6;
+    border: 1px solid #D5BC96;
+    border-radius: 10px;
+}
+QTabBar::tab {
+    background-color: #EAD6B5;
+    color: #4A3424;
+    border: 1px solid #C8AA80;
+    border-radius: 6px;
+    padding: 9px 18px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+QTabBar::tab:selected {
+    background-color: #795538;
+    color: #FFFFFF;
+    border-color: #795538;
+}
+QTabBar::tab:!selected:hover {
+    background-color: #F7E8CF;
+}
+QPushButton {
+    background-color: #EAD6B5;
+    color: #4A3424;
+    border: 1px solid #B9986F;
+    border-radius: 6px;
+    padding: 7px 14px;
+}
+QPushButton:hover { background-color: #F7E8CF; }
+QPushButton:pressed { background-color: #DCC09A; }
+QPushButton:focus { border: 2px solid #795538; }
+QPushButton:disabled { background-color: #E6DDCF; color: #786B5C; border-color: #CFC2AF; }
+QPushButton#saveSettings { background-color: #795538; color: #FFFFFF; border-color: #795538; }
+QPushButton#saveSettings:hover { background-color: #65452F; }
+QPushButton#saveSettings:pressed { background-color: #4A3424; }
+QCheckBox { spacing: 8px; }
+QLineEdit {
+    background: #FBF4E6;
+    color: #4A3424;
+    border: 1px solid #B9986F;
+    border-radius: 6px;
+    padding: 8px;
+    selection-background-color: #795538;
+    selection-color: #FFFFFF;
+}
+QPushButton#difficultyCard {
+    background-color: #FBF4E6;
+    color: #4A3424;
+    border: 2px solid #DDC9AA;
+    border-radius: 9px;
+    padding: 10px 18px;
+    text-align: left;
+}
+QPushButton#difficultyCard:hover {
+    background-color: #F5E8D2;
+    border-color: #B9986F;
+}
+QPushButton#difficultyCard:checked {
+    background-color: #EAD6B5;
+    border-color: #795538;
+    color: #4A3424;
+    font-weight: bold;
+}
+QPushButton#difficultyCard:focus { border-color: #795538; }
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #B9986F;
+    border-radius: 3px;
+    background: #FBF4E6;
+}
+QCheckBox::indicator:checked {
+    background: #795538;
+    border-color: #795538;
+    image: url("CHECK_ICON");
+}
+QCheckBox::indicator:hover { border-color: #4A3424; }
+QSlider::groove:horizontal {
+    background: #DDC9AA;
+    height: 6px;
+    border-radius: 3px;
+}
+QSlider::sub-page:horizontal { background: #795538; border-radius: 3px; }
+QSlider::handle:horizontal {
+    background: #FBF4E6;
+    border: 2px solid #795538;
+    width: 14px;
+    margin: -6px 0;
+    border-radius: 8px;
+}

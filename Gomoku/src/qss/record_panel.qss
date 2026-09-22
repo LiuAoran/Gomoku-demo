@@ -1,0 +1,26 @@
+QWidget#recordPanel {
+    background-color: #F1DFC0;
+    border-radius: 8px;
+}
+QLabel {
+    color: #4A3424;
+}
+QLabel#recordTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+QTableWidget {
+    background-color: #FBF4E6;
+    alternate-background-color: #F1E5D0;
+    color: #4A3424;
+    border: none;
+    selection-background-color: #DCC09A;
+    selection-color: #332419;
+}
+QHeaderView::section {
+    background-color: #E6D2A5;
+    color: #4A3424;
+    border: none;
+    padding: 6px 0;
+    font-weight: bold;
+}

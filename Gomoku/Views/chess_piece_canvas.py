@@ -1,24 +1,30 @@
-from PySide6.QtGui import QPainter, QPen
-from PySide6.QtCore import Qt
+from PySide6.QtGui import QColor, QPainter, QPen
+from PySide6.QtCore import QPointF, Qt, Signal
 from PySide6.QtWidgets import QWidget, QMessageBox
 
-from Models import data_model
-from Tools.macros import Const, PlaceResult, PLAYER_NAME, GameMode
-from Controllers import play_game_controller
-from Tools.signals import nav_signal
+from models import data_model
+from tools.macros import Const, PlaceResult, PLAYER_NAME, GameMode, Player
+from controllers import play_game_controller
+from tools.signals import nav_signal
 
 
 def nav_to_start_widget():
     nav_signal.nav_to_start_widget_signal.emit()
 
-
 class ChessPieceCanvas(QWidget):
+    game_changed = Signal()
+    game_finished = Signal(object, object)
 
     play_game_controller: play_game_controller.PlayGameController
 
-    def __init__(self):
+    def __init__(self, mode=GameMode.TWO_PLAYERS):
         super().__init__()
+        self.mode = mode
+        self.hint_point = None
 
+        self.continue_button = None
+        self.main_menu_button = None
+        self.msg_box = None
         self.setFixedSize(
             Const.BOARD_SIZE * Const.CELL_SIZE,
             Const.BOARD_SIZE * Const.CELL_SIZE
@@ -46,14 +52,23 @@ class ChessPieceCanvas(QWidget):
 
         self.restart_game()
 
-
     # =========================
     # 鼠标事件
     # =========================
 
     def mouseMoveEvent(self, event):
-        x = event.position().x()
-        y = event.position().y()
+        self.update_hover(event.position())
+
+    def update_hover(self, position):
+        if self.play_game_controller.is_game_over() or (
+            self.mode == GameMode.AI
+            and self.play_game_controller.game_model.current_player == Player.WHITE
+        ):
+            self.clear_hover()
+            return
+
+        x = position.x()
+        y = position.y()
 
         self.can_place = False
 
@@ -112,6 +127,7 @@ class ChessPieceCanvas(QWidget):
         if event.button() != Qt.MouseButton.LeftButton:
             return
 
+        self.update_hover(event.position())
         if not self.can_place:
             return
 
@@ -120,34 +136,65 @@ class ChessPieceCanvas(QWidget):
             self.hover_col
         )
 
-        if self.play_game_controller.place_stone(point) == PlaceResult.WIN:
-            msg_box = QMessageBox(self)
-            msg_box.setWindowTitle("游戏结束")
-            msg_box.setText(
-                f"{PLAYER_NAME[self.play_game_controller.game_model.winner]}获胜！"
+        self.place_stone(point)
+
+    def place_stone(self, point):
+        result = self.play_game_controller.place_stone(point)
+        self.hint_point = None
+        self.clear_hover()
+        if result != PlaceResult.INVALID:
+            self.game_changed.emit()
+
+        if result in (PlaceResult.WIN, PlaceResult.DRAW):
+            model = self.play_game_controller.game_model
+            self.game_finished.emit(model.winner, model.game_mode)
+            self.msg_box = QMessageBox(self)
+
+            self.msg_box.setWindowTitle("游戏结束")
+            self.msg_box.setText(
+                "棋盘已满，本局和棋！"
+                if result == PlaceResult.DRAW
+                else f"{PLAYER_NAME[self.play_game_controller.game_model.winner]}获胜！"
             )
 
-            main_menu_button = msg_box.addButton(
+            self.main_menu_button = self.msg_box.addButton(
                 "返回主菜单",
                 QMessageBox.ButtonRole.RejectRole
             )
 
-            continue_button = msg_box.addButton(
+            self.continue_button = self.msg_box.addButton(
                 "再来一局",
                 QMessageBox.ButtonRole.AcceptRole
             )
 
-            msg_box.exec()
+            self.msg_box.buttonClicked.connect(
+                self.on_game_over_button_clicked
+            )
 
-            if msg_box.clickedButton() == main_menu_button:
-                nav_to_start_widget()
+            self.msg_box.open()
 
-            elif msg_box.clickedButton() == continue_button:
-                self.restart_game()
+    def on_game_over_button_clicked(self, button):
+        if button == self.main_menu_button:
+            nav_to_start_widget()
+
+        elif button == self.continue_button:
+            self.restart_game()
 
     def restart_game(self):
-        self.play_game_controller.play_new_game(GameMode.TWO_PLAYERS)
-        self.update()
+        self.play_game_controller.play_new_game(self.mode)
+        self.hint_point = None
+        self.clear_hover()
+        self.game_changed.emit()
+
+    def undo_move(self):
+        moves = self.play_game_controller.game_model.moves
+        undo_pair = self.mode == GameMode.AI and moves and moves[-1].player == Player.WHITE
+        if self.play_game_controller.undo_move():
+            if undo_pair:
+                self.play_game_controller.undo_move()
+            self.hint_point = None
+            self.clear_hover()
+            self.game_changed.emit()
 
     def leaveEvent(self, event):
         self.clear_hover()
@@ -168,10 +215,17 @@ class ChessPieceCanvas(QWidget):
 
     def paintEvent(self, event):
         painter = QPainter(self)
-        self.paint_stones(painter)
         painter.setRenderHint(
             QPainter.RenderHint.Antialiasing
         )
+        self.paint_stones(painter)
+        if self.hint_point is not None:
+            painter.setPen(QPen(QColor("#19766D"), 3))
+            painter.setBrush(Qt.BrushStyle.NoBrush)
+            painter.drawEllipse(QPointF(
+                self.hint_point.y * Const.CELL_SIZE + Const.OFFSET_SIZE,
+                self.hint_point.x * Const.CELL_SIZE + Const.OFFSET_SIZE,
+            ), 11, 11)
 
         if self.hover_row == -1 or self.hover_col == -1:
             return
@@ -277,4 +331,3 @@ class ChessPieceCanvas(QWidget):
                     radius * 2,
                     radius * 2
                 )
-

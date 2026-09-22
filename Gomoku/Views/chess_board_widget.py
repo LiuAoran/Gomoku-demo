@@ -1,4 +1,5 @@
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QImage, QPainter, QPixmap
 from PySide6.QtWidgets import (
     QWidget,
     QVBoxLayout,
@@ -6,14 +7,16 @@ from PySide6.QtWidgets import (
     QLabel,
 )
 
-from Tools.helpers import Helper
-from Tools.macros import Const
-from Views.chess_board_canvas import ChessBoardCanvas
-from Views.chess_piece_canvas import ChessPieceCanvas
+from tools.helpers import Helper
+from tools.backgrounds import prepare_background
+from tools.macros import Const, GameMode
+from views.chess_board_canvas import ChessBoardCanvas
+from views.chess_piece_canvas import ChessPieceCanvas
 
 class ChessBoardWidget(QWidget):
-    def __init__(self):
+    def __init__(self, mode=GameMode.TWO_PLAYERS):
         super().__init__()
+        self.background = QPixmap()
         Helper.load_stylesheet(self, "chess_board_widget.qss")
 
         self.setObjectName("chessBoard")
@@ -86,7 +89,7 @@ class ChessBoardWidget(QWidget):
         self.board_area.move(0, 0)
 
         # 棋子层
-        self.piece_area = ChessPieceCanvas()
+        self.piece_area = ChessPieceCanvas(mode)
         self.piece_area.setParent(self.board_container)
         self.piece_area.move(0, 0)
 
@@ -100,5 +103,17 @@ class ChessBoardWidget(QWidget):
                       | Qt.AlignmentFlag.AlignLeft
         )
 
-        self.setLayout(board_layout)
         main_layout.addLayout(board_layout)
+
+    def set_background(self, path, blur=False):
+        source = QImage(path) if path else QImage()
+        image = prepare_background(source, blur)
+        self.background = QPixmap.fromImage(image)
+        self.update()
+
+    def paintEvent(self, event):
+        super().paintEvent(event)
+        if not self.background.isNull():
+            painter = QPainter(self)
+            painter.setRenderHint(QPainter.RenderHint.SmoothPixmapTransform)
+            painter.drawPixmap(self.rect(), self.background)

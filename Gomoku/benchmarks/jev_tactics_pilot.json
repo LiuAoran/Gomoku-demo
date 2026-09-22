@@ -1,0 +1,1331 @@
+{
+  "scope": "8 curated tactical positions; not full games or a strength rating",
+  "cases": [
+    {
+      "id": "win_four",
+      "name": "一步成五",
+      "black": [
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "white": [
+        [
+          7,
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "to_move": "BLACK",
+      "expected": [
+        [
+          7,
+          8
+        ]
+      ],
+      "local_hard": [
+        7,
+        8
+      ],
+      "local_pass": true,
+      "local_seconds": 0.002
+    },
+    {
+      "id": "block_four",
+      "name": "阻挡一步成五",
+      "black": [
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "white": [
+        [
+          7,
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "to_move": "WHITE",
+      "expected": [
+        [
+          7,
+          8
+        ]
+      ],
+      "local_hard": [
+        7,
+        8
+      ],
+      "local_pass": true,
+      "local_seconds": 0.614
+    },
+    {
+      "id": "win_broken_four",
+      "name": "补跳四取胜",
+      "black": [
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "white": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "to_move": "BLACK",
+      "expected": [
+        [
+          7,
+          6
+        ]
+      ],
+      "local_hard": [
+        7,
+        6
+      ],
+      "local_pass": true,
+      "local_seconds": 0.003
+    },
+    {
+      "id": "block_diagonal_four",
+      "name": "阻挡斜向跳四",
+      "black": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "white": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "to_move": "WHITE",
+      "expected": [
+        [
+          6,
+          6
+        ]
+      ],
+      "local_hard": [
+        6,
+        6
+      ],
+      "local_pass": true,
+      "local_seconds": 0.329
+    },
+    {
+      "id": "create_open_four",
+      "name": "活三形成活四",
+      "black": [
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "white": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "to_move": "BLACK",
+      "expected": [
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "local_hard": [
+        7,
+        8
+      ],
+      "local_pass": true,
+      "local_seconds": 0.023
+    },
+    {
+      "id": "defend_open_three",
+      "name": "阻止对手形成活四",
+      "black": [
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "white": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "to_move": "WHITE",
+      "expected": [
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "local_hard": [
+        7,
+        8
+      ],
+      "local_pass": true,
+      "local_seconds": 1.087
+    },
+    {
+      "id": "create_double_four",
+      "name": "制造双四",
+      "black": [
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "white": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "to_move": "BLACK",
+      "expected": [
+        [
+          7,
+          7
+        ]
+      ],
+      "local_hard": [
+        7,
+        7
+      ],
+      "local_pass": true,
+      "local_seconds": 0.038
+    },
+    {
+      "id": "defend_double_four",
+      "name": "阻止对手制造双四",
+      "black": [
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "white": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "to_move": "WHITE",
+      "expected": [
+        [
+          7,
+          7
+        ]
+      ],
+      "local_hard": [
+        0,
+        3
+      ],
+      "local_pass": false,
+      "local_seconds": 0.605
+    }
+  ],
+  "runs": [
+    {
+      "case": "win_four",
+      "mode": "current",
+      "repetition": 1,
+      "option_count": 1,
+      "expected_in_options": [
+        "r7_c8"
+      ],
+      "selected": [
+        7,
+        8
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c8",
+        "confidence": 1.0,
+        "probabilities": {
+          "r7_c8": 1.0
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 472,
+        "output_tokens": 30
+      },
+      "seconds": 2.214
+    },
+    {
+      "case": "block_four",
+      "mode": "current",
+      "repetition": 1,
+      "option_count": 1,
+      "expected_in_options": [
+        "r7_c8"
+      ],
+      "selected": [
+        7,
+        8
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c8",
+        "confidence": 1.0,
+        "probabilities": {
+          "r7_c8": 1.0
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 471,
+        "output_tokens": 30
+      },
+      "seconds": 1.325
+    },
+    {
+      "case": "win_broken_four",
+      "mode": "current",
+      "repetition": 1,
+      "option_count": 1,
+      "expected_in_options": [
+        "r7_c6"
+      ],
+      "selected": [
+        7,
+        6
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c6",
+        "confidence": 1.0,
+        "probabilities": {
+          "r7_c6": 1.0
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 474,
+        "output_tokens": 30
+      },
+      "seconds": 1.703
+    },
+    {
+      "case": "block_diagonal_four",
+      "mode": "current",
+      "repetition": 1,
+      "option_count": 1,
+      "expected_in_options": [
+        "r6_c6"
+      ],
+      "selected": [
+        6,
+        6
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r6_c6",
+        "confidence": 1.0,
+        "probabilities": {
+          "r6_c6": 1.0
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 474,
+        "output_tokens": 30
+      },
+      "seconds": 1.445
+    },
+    {
+      "case": "create_open_four",
+      "mode": "current",
+      "repetition": 1,
+      "option_count": 24,
+      "expected_in_options": [
+        "r7_c4",
+        "r7_c8"
+      ],
+      "selected": [
+        7,
+        4
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c4",
+        "confidence": 0.41,
+        "probabilities": {
+          "r8_c7": 0.01,
+          "r1_c5": 0.0,
+          "r6_c5": 0.05,
+          "r1_c2": 0.0,
+          "r1_c1": 0.0,
+          "r0_c1": 0.01,
+          "r0_c3": 0.04,
+          "r6_c4": 0.05,
+          "r7_c8": 0.06,
+          "r1_c0": 0.0,
+          "r9_c9": 0.0,
+          "r6_c8": 0.01,
+          "r6_c6": 0.02,
+          "r7_c9": 0.02,
+          "r8_c8": 0.0,
+          "r1_c4": 0.0,
+          "r7_c4": 0.44,
+          "r7_c3": 0.16,
+          "r1_c3": 0.0,
+          "r8_c6": 0.01,
+          "r8_c4": 0.06999999999999999,
+          "r6_c7": 0.02,
+          "r0_c5": 0.0,
+          "r8_c5": 0.03
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1023,
+        "output_tokens": 260
+      },
+      "seconds": 1.392
+    },
+    {
+      "case": "defend_open_three",
+      "mode": "current",
+      "repetition": 1,
+      "option_count": 24,
+      "expected_in_options": [
+        "r7_c4",
+        "r7_c8"
+      ],
+      "selected": [
+        7,
+        4
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c4",
+        "confidence": 0.24,
+        "probabilities": {
+          "r6_c7": 0.03,
+          "r9_c6": 0.01,
+          "r1_c0": 0.0,
+          "r7_c8": 0.06,
+          "r7_c3": 0.06,
+          "r8_c8": 0.01,
+          "r9_c7": 0.01,
+          "r0_c3": 0.02,
+          "r0_c1": 0.01,
+          "r6_c4": 0.05,
+          "r8_c6": 0.07,
+          "r6_c6": 0.05,
+          "r8_c4": 0.11,
+          "r8_c5": 0.07,
+          "r9_c9": 0.0,
+          "r1_c1": 0.01,
+          "r1_c2": 0.01,
+          "r6_c5": 0.04,
+          "r7_c9": 0.02,
+          "r9_c8": 0.01,
+          "r1_c3": 0.0,
+          "r6_c8": 0.02,
+          "r8_c7": 0.05,
+          "r7_c4": 0.28
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1022,
+        "output_tokens": 260
+      },
+      "seconds": 1.412
+    },
+    {
+      "case": "create_double_four",
+      "mode": "current",
+      "repetition": 1,
+      "option_count": 24,
+      "expected_in_options": [
+        "r7_c7"
+      ],
+      "selected": [
+        7,
+        4
+      ],
+      "legal": true,
+      "pass": false,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c4",
+        "confidence": 0.22,
+        "probabilities": {
+          "r4_c5": 0.01,
+          "r9_c4": 0.01,
+          "r8_c4": 0.04,
+          "r10_c9": 0.0,
+          "r0_c3": 0.03,
+          "r10_c5": 0.01,
+          "r0_c5": 0.01,
+          "r2_c1": 0.01,
+          "r7_c4": 0.26,
+          "r2_c3": 0.04,
+          "r6_c6": 0.16,
+          "r9_c10": 0.0,
+          "r5_c10": 0.01,
+          "r3_c7": 0.03,
+          "r5_c4": 0.01,
+          "r4_c8": 0.01,
+          "r9_c7": 0.02,
+          "r7_c7": 0.17,
+          "r4_c7": 0.02,
+          "r4_c9": 0.0,
+          "r7_c9": 0.03,
+          "r2_c5": 0.01,
+          "r7_c3": 0.09,
+          "r0_c1": 0.02
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1037,
+        "output_tokens": 264
+      },
+      "seconds": 1.617
+    },
+    {
+      "case": "defend_double_four",
+      "mode": "current",
+      "repetition": 1,
+      "option_count": 24,
+      "expected_in_options": [
+        "r7_c7"
+      ],
+      "selected": [
+        0,
+        3
+      ],
+      "legal": true,
+      "pass": false,
+      "answer": {
+        "type": "choice",
+        "choice": "r0_c3",
+        "confidence": 0.12,
+        "probabilities": {
+          "r5_c6": 0.07,
+          "r7_c3": 0.04,
+          "r9_c4": 0.01,
+          "r5_c4": 0.01,
+          "r4_c7": 0.02,
+          "r10_c5": 0.01,
+          "r9_c7": 0.01,
+          "r4_c8": 0.02,
+          "r4_c5": 0.01,
+          "r5_c8": 0.03,
+          "r3_c7": 0.02,
+          "r0_c3": 0.16,
+          "r7_c4": 0.08,
+          "r8_c5": 0.05,
+          "r5_c10": 0.01,
+          "r7_c9": 0.04,
+          "r6_c6": 0.13,
+          "r4_c9": 0.0,
+          "r6_c5": 0.05,
+          "r9_c10": 0.0,
+          "r8_c4": 0.02,
+          "r7_c7": 0.15,
+          "r0_c1": 0.06,
+          "r10_c9": 0.0
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1036,
+        "output_tokens": 264
+      },
+      "seconds": 1.955
+    },
+    {
+      "case": "win_four",
+      "mode": "unfiltered",
+      "repetition": 1,
+      "option_count": 58,
+      "expected_in_options": [
+        "r7_c8"
+      ],
+      "selected": [
+        7,
+        2
+      ],
+      "legal": true,
+      "pass": false,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c2",
+        "confidence": 0.16,
+        "probabilities": {
+          "r9_c4": 0.01,
+          "r8_c8": 0.01,
+          "r8_c7": 0.01,
+          "r6_c2": 0.08,
+          "r2_c6": 0.01,
+          "r2_c3": 0.0,
+          "r8_c5": 0.02,
+          "r5_c7": 0.03,
+          "r5_c3": 0.01,
+          "r9_c6": 0.01,
+          "r1_c3": 0.01,
+          "r5_c8": 0.02,
+          "r9_c9": 0.0,
+          "r7_c8": 0.06,
+          "r0_c5": 0.01,
+          "r1_c4": 0.0,
+          "r9_c1": 0.0,
+          "r0_c6": 0.01,
+          "r5_c4": 0.01,
+          "r5_c6": 0.05,
+          "r8_c2": 0.01,
+          "r5_c2": 0.01,
+          "r7_c9": 0.03,
+          "r2_c5": 0.0,
+          "r6_c6": 0.03,
+          "r1_c6": 0.01,
+          "r9_c5": 0.0,
+          "r2_c4": 0.0,
+          "r2_c2": 0.0,
+          "r7_c1": 0.02,
+          "r9_c8": 0.0,
+          "r2_c1": 0.0,
+          "r5_c9": 0.0,
+          "r8_c6": 0.02,
+          "r1_c1": 0.0,
+          "r9_c3": 0.0,
+          "r8_c9": 0.01,
+          "r8_c4": 0.01,
+          "r6_c5": 0.02,
+          "r8_c1": 0.0,
+          "r0_c3": 0.02,
+          "r7_c2": 0.18000000000000002,
+          "r1_c0": 0.01,
+          "r1_c2": 0.0,
+          "r6_c9": 0.02,
+          "r5_c5": 0.03,
+          "r2_c0": 0.0,
+          "r0_c1": 0.02,
+          "r1_c5": 0.01,
+          "r9_c7": 0.01,
+          "r6_c3": 0.02,
+          "r8_c3": 0.01,
+          "r5_c1": 0.01,
+          "r6_c1": 0.04,
+          "r6_c8": 0.04,
+          "r6_c7": 0.02,
+          "r9_c2": 0.01,
+          "r6_c4": 0.02
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1840,
+        "output_tokens": 600
+      },
+      "seconds": 1.3
+    },
+    {
+      "case": "block_four",
+      "mode": "unfiltered",
+      "repetition": 1,
+      "option_count": 53,
+      "expected_in_options": [
+        "r7_c8"
+      ],
+      "selected": [
+        7,
+        2
+      ],
+      "legal": true,
+      "pass": false,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c2",
+        "confidence": 0.12,
+        "probabilities": {
+          "r5_c9": 0.0,
+          "r6_c3": 0.04,
+          "r1_c4": 0.0,
+          "r7_c1": 0.03,
+          "r9_c8": 0.01,
+          "r1_c0": 0.0,
+          "r5_c1": 0.0,
+          "r9_c6": 0.01,
+          "r9_c7": 0.02,
+          "r6_c7": 0.03,
+          "r6_c2": 0.01,
+          "r7_c8": 0.060000000000000005,
+          "r8_c1": 0.0,
+          "r5_c6": 0.03,
+          "r9_c2": 0.0,
+          "r9_c9": 0.0,
+          "r5_c5": 0.04,
+          "r7_c2": 0.14,
+          "r8_c4": 0.02,
+          "r2_c4": 0.0,
+          "r6_c5": 0.08,
+          "r8_c8": 0.01,
+          "r6_c9": 0.01,
+          "r9_c1": 0.0,
+          "r9_c5": 0.01,
+          "r5_c3": 0.03,
+          "r5_c8": 0.03,
+          "r6_c6": 0.060000000000000005,
+          "r8_c7": 0.03,
+          "r6_c8": 0.01,
+          "r5_c2": 0.0,
+          "r8_c3": 0.03,
+          "r1_c3": 0.0,
+          "r6_c4": 0.03,
+          "r2_c3": 0.0,
+          "r2_c2": 0.0,
+          "r8_c6": 0.03,
+          "r9_c4": 0.01,
+          "r6_c1": 0.0,
+          "r5_c7": 0.04,
+          "r9_c3": 0.01,
+          "r2_c0": 0.0,
+          "r1_c1": 0.0,
+          "r1_c2": 0.01,
+          "r2_c1": 0.0,
+          "r8_c5": 0.03,
+          "r0_c4": 0.01,
+          "r5_c4": 0.02,
+          "r8_c9": 0.01,
+          "r0_c1": 0.01,
+          "r7_c9": 0.02,
+          "r8_c2": 0.01,
+          "r0_c3": 0.02
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1719,
+        "output_tokens": 550
+      },
+      "seconds": 1.363
+    },
+    {
+      "case": "win_broken_four",
+      "mode": "unfiltered",
+      "repetition": 1,
+      "option_count": 64,
+      "expected_in_options": [
+        "r7_c6"
+      ],
+      "selected": [
+        7,
+        6
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c6",
+        "confidence": 0.19,
+        "probabilities": {
+          "r9_c2": 0.0,
+          "r8_c6": 0.05,
+          "r8_c2": 0.0,
+          "r2_c6": 0.0,
+          "r8_c8": 0.01,
+          "r2_c3": 0.0,
+          "r1_c0": 0.0,
+          "r9_c9": 0.0,
+          "r8_c7": 0.05,
+          "r8_c4": 0.03,
+          "r7_c10": 0.01,
+          "r5_c6": 0.01,
+          "r3_c2": 0.0,
+          "r1_c2": 0.0,
+          "r8_c10": 0.0,
+          "r1_c4": 0.0,
+          "r2_c4": 0.0,
+          "r8_c9": 0.01,
+          "r6_c6": 0.02,
+          "r6_c10": 0.0,
+          "r4_c0": 0.0,
+          "r9_c10": 0.0,
+          "r9_c4": 0.01,
+          "r1_c1": 0.01,
+          "r6_c9": 0.01,
+          "r0_c1": 0.02,
+          "r2_c2": 0.0,
+          "r5_c2": 0.0,
+          "r0_c6": 0.0,
+          "r6_c2": 0.0,
+          "r7_c9": 0.05,
+          "r6_c3": 0.03,
+          "r9_c3": 0.0,
+          "r5_c3": 0.01,
+          "r5_c10": 0.0,
+          "r2_c5": 0.0,
+          "r6_c5": 0.04,
+          "r9_c6": 0.01,
+          "r4_c1": 0.0,
+          "r9_c7": 0.01,
+          "r3_c0": 0.0,
+          "r9_c5": 0.0,
+          "r5_c8": 0.0,
+          "r0_c3": 0.02,
+          "r3_c1": 0.0,
+          "r7_c6": 0.21000000000000002,
+          "r8_c5": 0.06999999999999999,
+          "r5_c4": 0.0,
+          "r5_c7": 0.01,
+          "r0_c5": 0.0,
+          "r2_c1": 0.01,
+          "r1_c5": 0.0,
+          "r1_c6": 0.0,
+          "r7_c3": 0.08,
+          "r5_c5": 0.0,
+          "r9_c8": 0.0,
+          "r1_c3": 0.0,
+          "r6_c4": 0.04,
+          "r6_c8": 0.02,
+          "r5_c9": 0.0,
+          "r6_c7": 0.060000000000000005,
+          "r4_c2": 0.0,
+          "r8_c3": 0.02,
+          "r7_c2": 0.060000000000000005
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1996,
+        "output_tokens": 665
+      },
+      "seconds": 1.831
+    },
+    {
+      "case": "block_diagonal_four",
+      "mode": "unfiltered",
+      "repetition": 1,
+      "option_count": 68,
+      "expected_in_options": [
+        "r6_c6"
+      ],
+      "selected": [
+        0,
+        3
+      ],
+      "legal": true,
+      "pass": false,
+      "answer": {
+        "type": "choice",
+        "choice": "r0_c3",
+        "confidence": 0.23,
+        "probabilities": {
+          "r4_c2": 0.01,
+          "r6_c7": 0.01,
+          "r10_c10": 0.0,
+          "r2_c4": 0.01,
+          "r5_c3": 0.02,
+          "r4_c5": 0.04,
+          "r4_c6": 0.02,
+          "r9_c7": 0.0,
+          "r5_c8": 0.0,
+          "r1_c1": 0.01,
+          "r1_c3": 0.01,
+          "r9_c8": 0.01,
+          "r6_c6": 0.02,
+          "r8_c9": 0.0,
+          "r6_c10": 0.0,
+          "r4_c7": 0.01,
+          "r7_c9": 0.01,
+          "r7_c5": 0.01,
+          "r6_c4": 0.03,
+          "r6_c9": 0.0,
+          "r7_c10": 0.0,
+          "r10_c6": 0.0,
+          "r5_c4": 0.09,
+          "r5_c2": 0.0,
+          "r1_c4": 0.01,
+          "r9_c9": 0.0,
+          "r2_c3": 0.0,
+          "r0_c1": 0.03,
+          "r10_c7": 0.0,
+          "r6_c8": 0.01,
+          "r5_c9": 0.0,
+          "r2_c6": 0.0,
+          "r0_c3": 0.25,
+          "r2_c5": 0.0,
+          "r1_c6": 0.0,
+          "r1_c5": 0.01,
+          "r0_c6": 0.01,
+          "r5_c6": 0.02,
+          "r3_c4": 0.03,
+          "r1_c0": 0.01,
+          "r0_c5": 0.01,
+          "r7_c8": 0.01,
+          "r8_c6": 0.01,
+          "r10_c9": 0.0,
+          "r3_c7": 0.01,
+          "r6_c5": 0.060000000000000005,
+          "r5_c7": 0.01,
+          "r2_c2": 0.01,
+          "r3_c5": 0.02,
+          "r6_c3": 0.01,
+          "r7_c3": 0.0,
+          "r8_c7": 0.01,
+          "r10_c8": 0.0,
+          "r3_c2": 0.0,
+          "r7_c6": 0.02,
+          "r2_c0": 0.01,
+          "r9_c5": 0.0,
+          "r7_c4": 0.01,
+          "r3_c6": 0.01,
+          "r8_c10": 0.0,
+          "r1_c2": 0.01,
+          "r2_c1": 0.0,
+          "r3_c3": 0.01,
+          "r6_c2": 0.0,
+          "r8_c5": 0.05,
+          "r4_c3": 0.02,
+          "r9_c6": 0.01,
+          "r9_c10": 0.0
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 2102,
+        "output_tokens": 710
+      },
+      "seconds": 1.621
+    },
+    {
+      "case": "create_open_four",
+      "mode": "current",
+      "repetition": 2,
+      "option_count": 24,
+      "expected_in_options": [
+        "r7_c4",
+        "r7_c8"
+      ],
+      "selected": [
+        7,
+        4
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c4",
+        "confidence": 0.46,
+        "probabilities": {
+          "r0_c1": 0.01,
+          "r1_c3": 0.0,
+          "r9_c9": 0.0,
+          "r6_c6": 0.02,
+          "r0_c5": 0.0,
+          "r6_c7": 0.01,
+          "r8_c6": 0.01,
+          "r6_c5": 0.05,
+          "r7_c3": 0.15000000000000002,
+          "r6_c4": 0.04,
+          "r7_c4": 0.49,
+          "r6_c8": 0.01,
+          "r1_c2": 0.0,
+          "r0_c3": 0.04,
+          "r1_c0": 0.0,
+          "r1_c4": 0.0,
+          "r1_c1": 0.0,
+          "r8_c7": 0.01,
+          "r8_c4": 0.060000000000000005,
+          "r8_c8": 0.0,
+          "r7_c8": 0.05,
+          "r7_c9": 0.02,
+          "r8_c5": 0.03,
+          "r1_c5": 0.0
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1023,
+        "output_tokens": 260
+      },
+      "seconds": 1.928
+    },
+    {
+      "case": "defend_open_three",
+      "mode": "current",
+      "repetition": 2,
+      "option_count": 24,
+      "expected_in_options": [
+        "r7_c4",
+        "r7_c8"
+      ],
+      "selected": [
+        7,
+        4
+      ],
+      "legal": true,
+      "pass": true,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c4",
+        "confidence": 0.25,
+        "probabilities": {
+          "r6_c6": 0.06,
+          "r6_c7": 0.03,
+          "r9_c8": 0.01,
+          "r9_c9": 0.0,
+          "r9_c7": 0.01,
+          "r7_c8": 0.06,
+          "r6_c8": 0.02,
+          "r1_c3": 0.0,
+          "r7_c9": 0.03,
+          "r7_c3": 0.07,
+          "r8_c5": 0.07,
+          "r7_c4": 0.29000000000000004,
+          "r8_c4": 0.09999999999999999,
+          "r1_c2": 0.01,
+          "r6_c4": 0.04,
+          "r1_c0": 0.0,
+          "r9_c6": 0.01,
+          "r1_c1": 0.01,
+          "r8_c6": 0.06,
+          "r8_c8": 0.01,
+          "r0_c1": 0.01,
+          "r0_c3": 0.02,
+          "r6_c5": 0.03,
+          "r8_c7": 0.05
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1022,
+        "output_tokens": 260
+      },
+      "seconds": 2.314
+    },
+    {
+      "case": "create_double_four",
+      "mode": "current",
+      "repetition": 2,
+      "option_count": 24,
+      "expected_in_options": [
+        "r7_c7"
+      ],
+      "selected": [
+        7,
+        4
+      ],
+      "legal": true,
+      "pass": false,
+      "answer": {
+        "type": "choice",
+        "choice": "r7_c4",
+        "confidence": 0.25,
+        "probabilities": {
+          "r3_c7": 0.03,
+          "r4_c7": 0.02,
+          "r9_c4": 0.01,
+          "r8_c4": 0.04,
+          "r0_c5": 0.01,
+          "r2_c1": 0.01,
+          "r0_c1": 0.02,
+          "r2_c3": 0.04,
+          "r9_c7": 0.02,
+          "r2_c5": 0.01,
+          "r7_c4": 0.28,
+          "r6_c6": 0.15,
+          "r5_c4": 0.02,
+          "r4_c8": 0.01,
+          "r5_c10": 0.01,
+          "r9_c10": 0.0,
+          "r4_c5": 0.01,
+          "r4_c9": 0.0,
+          "r7_c9": 0.03,
+          "r7_c7": 0.16,
+          "r0_c3": 0.03,
+          "r10_c5": 0.0,
+          "r10_c9": 0.0,
+          "r7_c3": 0.09
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1037,
+        "output_tokens": 264
+      },
+      "seconds": 1.593
+    },
+    {
+      "case": "defend_double_four",
+      "mode": "current",
+      "repetition": 2,
+      "option_count": 24,
+      "expected_in_options": [
+        "r7_c7"
+      ],
+      "selected": [
+        6,
+        6
+      ],
+      "legal": true,
+      "pass": false,
+      "answer": {
+        "type": "choice",
+        "choice": "r6_c6",
+        "confidence": 0.09,
+        "probabilities": {
+          "r4_c7": 0.02,
+          "r5_c10": 0.01,
+          "r7_c9": 0.04,
+          "r7_c7": 0.11,
+          "r0_c1": 0.07,
+          "r8_c5": 0.06,
+          "r8_c4": 0.03,
+          "r6_c5": 0.06,
+          "r5_c4": 0.01,
+          "r9_c10": 0.0,
+          "r3_c7": 0.02,
+          "r10_c9": 0.0,
+          "r10_c5": 0.01,
+          "r7_c4": 0.1,
+          "r4_c5": 0.01,
+          "r9_c4": 0.01,
+          "r4_c8": 0.02,
+          "r5_c6": 0.07,
+          "r0_c3": 0.12,
+          "r6_c6": 0.12000000000000001,
+          "r4_c9": 0.01,
+          "r7_c3": 0.05,
+          "r9_c7": 0.01,
+          "r5_c8": 0.04
+        }
+      },
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1036,
+        "output_tokens": 264
+      },
+      "seconds": 1.422
+    }
+  ],
+  "caveat": "Pilot only: filler stones created a counterattack in defend_double_four; fixed expected squares are not exhaustive best moves. Do not use pilot pass counts as final strength score."
+}

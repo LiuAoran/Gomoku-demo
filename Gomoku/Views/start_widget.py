@@ -6,11 +6,12 @@ from PySide6.QtWidgets import (
     QPushButton,
 )
 
-from Tools.macros import GameMode
-from Tools.helpers import Helper
+from tools.macros import GameMode
+from tools.helpers import Helper
 
 class StartWidget(QWidget):
     start_game_signal = Signal(GameMode)
+    settings_requested = Signal()
 
     def __init__(self):
         super().__init__()
@@ -44,6 +45,7 @@ class StartWidget(QWidget):
         ai_player_button = QPushButton("AI 对弈")
         two_player_button = QPushButton("双人对弈")
         settings_button = QPushButton("设置")
+        self.settings_button = settings_button
         exit_button = QPushButton("退出")
 
         ai_player_button.setObjectName("startBtn")
@@ -92,4 +94,5 @@ class StartWidget(QWidget):
             lambda: self.start_game_signal.emit(GameMode.TWO_PLAYERS)
         )
 
-        exit_button.clicked.connect(self.close)
+        settings_button.clicked.connect(self.settings_requested.emit)
+        exit_button.clicked.connect(lambda: self.window().close())

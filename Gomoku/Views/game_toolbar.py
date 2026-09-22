@@ -8,7 +8,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt
 
 
-from Tools.helpers import Helper
+from tools.helpers import Helper
 from PySide6.QtGui import QPalette
 
 class GameToolbar(QWidget):
@@ -35,23 +35,27 @@ class GameToolbar(QWidget):
         # AI 提示
         self.hint_button = QPushButton("提示")
 
-        # 保存棋谱
-        self.save_record_button = QPushButton("保存棋谱")
-
-        # 保存棋谱
+        # 返回
         self.back_button = QPushButton("返回主界面")
+        self.settings_button = QPushButton("设置")
 
         # 状态
         self.status_label = QLabel("黑方回合")
+        self.sound_button = QPushButton("声音：关")
+        self.sound_button.setCheckable(True)
+        self.sound_button.setToolTip("统一开关背景音乐和输赢音效；音量及分类开关可在设置中调整")
+        self.sound_button.toggled.connect(
+            lambda enabled: self.sound_button.setText("声音：开" if enabled else "声音：关")
+        )
 
         layout.addWidget(self.new_game_button)
         layout.addWidget(self.undo_button)
         layout.addWidget(self.hint_button)
-        layout.addWidget(self.save_record_button)
         layout.addWidget(self.back_button)
+        layout.addWidget(self.settings_button)
+        layout.addWidget(self.sound_button)
 
         # 把状态推到右侧
         layout.addStretch()
 
         layout.addWidget(self.status_label)
-

@@ -17,8 +17,8 @@
 *.qm
 .#*
 *.*#
-Models
-!Models/
+models
+!models/
 tags
 .DS_Store
 .directory
@@ -82,3 +82,8 @@ CMakeLists.txt.user*
 .uic/
 /build*/
 /.qtcreator/
+
+# Local API credentials
+.env
+.env.*
+!.env.example

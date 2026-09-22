@@ -16,6 +16,17 @@ class PlaceResult(Enum):
     WIN = 2           # 获胜
     DRAW = 3          # 和棋
 
+class PatternScore(Enum):
+    FIVE = 1_000_000
+    OPEN_FOUR = 100_000
+    FORE = 10_000
+    OPEN_THREE = 5_000,
+    THREE = 500
+    OPEN_TWO = 200
+    TWO = 20
+    ONE = 1
+
+
 PLAYER_NAME = {
     Player.BLACK: "黑方",
     Player.WHITE: "白方",
